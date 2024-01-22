@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location de Voitures en Algérie</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Location de Voitures en Algérie</h1>
+        </div>
+
+        <nav class="main-menu">
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#flotte-info">Flotte</a></li>
+                <li><a href="#tarifs">Tarifs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Partie Accueil -->
+    <section id="accueil" class="hero-section" style="background-image: url('R.jpeg');">
+        <h2>Bienvenue chez <span class="colored-text">LocationVoitureDZ</span></h2>
+        <p>Découvrez une expérience de conduite exceptionnelle avec notre large sélection de voitures de qualité. Que vous recherchiez une voiture élégante pour une escapade en ville ou un véhicule spacieux pour un voyage en famille, nous avons ce qu'il vous faut. Trouvez la voiture parfaite qui correspond à votre style et à vos besoins, et partez à l'aventure en toute confiance.</p>
+        <a href="#flotte-info" class="cta-button">Voir la flotte</a>
+    </section>
+
+
+
+    <!-- Partie Flotte -->
+    <section id="flotte-info" class="content-section">
+        <h2><span class="colored-text">Notre Flotte</span></h2>
+        <p>Découvrez nos voitures disponibles à la location.</p>
+        <div class="flotte-container">
+            <!-- Image représentant la flotte de voitures -->
+            <img src="duster.png" alt="Flotte de voitures" class="flotte-image">
+
+            <!-- Informations sur la flotte à droite de l'image -->
+            <div class="flotte-details">
+                <h3><span class="colored-text">Informations sur la voiture</span></h3>
+                <ul>
+                    <li><strong>Places:</strong> 5</li>
+                    <li><strong>Portes:</strong> 4</li>
+                    <li><strong>Climatisation:</strong> Oui</li>
+                    <li><strong>Motorisation:</strong> Essence</li>
+                    <li><p><strong><span class="colored-text">Prix de location :</span></strong> 5000 DA par jour</p></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Partie Tarifs -->
+    <section id="tarifs" class="content-section">
+        <h2><span class="colored-text">Tarifs</span></h2>
+        <p>Consultez nos tarifs de location.</p>
+
+        <!-- Information sur le prix de location -->
+        <div class="tarif-details">
+            <p><strong>Prix de location :</strong> <span id="prix">0</span> DA</p>
+        </div>
+
+        <!-- Formulaire pour les dates de début et de fin de la location avec un tableau -->
+        <table class="date-table">
+            <tr>
+                <td>
+                    <label for="start-date"><strong><span class="colored-text">Date de début :</span></strong></label>
+                    <input type="date" id="start-date" name="start-date" required>
+                </td>
+                <td>
+                    <label for="end-date"><strong><span class="colored-text">Date de fin :</span></strong></label>
+                    <input type="date" id="end-date" name="end-date" required>
+                </td>
+            </tr>
+        </table>
+
+        <!-- Script JavaScript pour calculer le prix -->
+        <script>
+            function calculerPrix() {
+                var prixParJour = 5000; // Prix par jour en DA
+                var startDate = new Date(document.getElementById('start-date').value);
+                var endDate = new Date(document.getElementById('end-date').value);
+
+                // Calcul du nombre de jours de location
+                var differenceJours = (endDate - startDate) / (1000 * 60 * 60 * 24);
+
+                // Calcul du prix total
+                var prixTotal = prixParJour * differenceJours;
+
+                // Affichage du prix total
+                document.getElementById('prix').textContent = prixTotal;
+            }
+
+            // Ajoute un écouteur d'événements pour appeler la fonction lors de la modification des dates
+            document.getElementById('start-date').addEventListener('input', calculerPrix);
+            document.getElementById('end-date').addEventListener('input', calculerPrix);
+        </script>
+    </section>
+
+
+    <!-- Partie Contact -->
+    <section id="contact" class="content-section">
+        <h2><span class="colored-text">Contact</span></h2>
+        <p>Adresse, numéro de téléphone, formulaire de contact, etc.</p>
+        <!-- Inclure ici des informations de contact -->
+    </section>
+
+
+</body>
+</html>
+

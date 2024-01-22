@@ -1,0 +1,207 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+}
+
+/* Styles pour le menu déroulant */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #333;
+    padding: 10px;
+    width: 150px;
+}
+
+.dropdown-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li {
+    margin-bottom: 10px;
+}
+
+.dropdown-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Montrer le menu déroulant uniquement en survol de l'icône hamburger-menu */
+.hamburger-menu:hover .dropdown-menu {
+    display: block;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+}
+
+h1 {
+    margin: 0;
+    text-align: left;
+}
+
+.main-menu {
+    display: flex;
+}
+
+.main-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.main-menu li {
+    margin-right: 20px;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .main-menu {
+        flex-direction: column;
+    }
+
+    .main-menu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+.dropdown-menu select {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+header:hover .dropdown-menu {
+    display: block;
+}
+
+/* Styles spécifiques à la section #hero */
+#hero {
+    background-image: url('R.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+}
+
+#hero h2 {
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #e8491d;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+/* Styles spécifiques à la section #accueil */
+#accueil {
+    background-image: url('R.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    text-align: center;
+    padding: 50px;
+    margin: 0;
+}
+
+    #accueil h2 {
+        margin-bottom: 20px;
+    }
+
+.colored-text {
+    color: #e8491d;
+}
+
+#accueil p {
+    color: black;
+}
+
+/* Styles communs à plusieurs parties de la page */
+section {
+    padding: 50px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.flotte-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+}
+
+.flotte-image {
+    width: 100%;
+    max-width: 600px; /* Ajustez la largeur maximale de l'image selon vos besoins */
+    height: auto;
+}
+
+/* Ajoutez ce style à votre fichier CSS existant */
+
+.date-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.date-table td {
+    border: 2px solid #e8491d;
+    padding: 10px;
+}
+
+.date-table label {
+    display: block;
+    margin-bottom: 5px;
+}
+
